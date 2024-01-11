@@ -4,8 +4,7 @@ title: Awesome presentation
 subtitle: Cool seminar
 date: today
 
-format: 
-  tud-beamer: default
+format: tud-beamer
 
 bibliography: references.bib
 ---
