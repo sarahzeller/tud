@@ -2,7 +2,7 @@
 
 A template for a beamer presentation in quarto, styled for the TUD.
 
-![](tud-beamer.png)
+![](tud-beamer.PNG)
 
 ## Installing
 
