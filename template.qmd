@@ -10,6 +10,7 @@ format:
 execute:
   warning: false
   echo: false
+  
 bibliography: references.bib
 ---
 
@@ -35,7 +36,9 @@ bibliography: references.bib
 ## Going to sleep
 
 -   Get in bed
--   Count sheep
+    -   Count sheep
+    -   Count even more sheep
+
 -   Add a reference to your \LaTeX-template [@tidyverse]
 
 ## References {.allowframebreaks}
@@ -45,6 +48,31 @@ bibliography: references.bib
 
 # Appendix
 
-## Slide 1
+## A graph for the `mtcars` dataset
 
-## Slide 2
+```{r}
+#| label: fig-mtcars
+#| fig-height: 5
+#| fig-cap: Horse power correlates with miles per gallon.
+library(ggplot2)
+mtcars |> 
+  ggplot() +
+  geom_point(aes(x = mpg, y = hp, col = cyl)) +
+  labs(x = "Miles per gallon",
+       y = "Horse power",
+       col = "Cylinders",
+       caption = "Data: {datasets}") +
+  theme_minimal()
+```
+
+## A table for the `mtcars` dataset
+
+```{r}
+#| label: tabl-mtcars
+##| tbl-cap: Summary statistics for `mtcars`
+
+library(modelsummary)
+mtcars |> 
+  datasummary_skim()
+```
+
