@@ -1,0 +1,14 @@
+\logo{
+\includegraphics[width=1.5cm]{_extensions/tud/TU_Dresden_Logo_blau_HKS41.png}
+}
+
+\AtBeginEnvironment{longtable}{\tiny}
+\AtBeginEnvironment{tabular}{\tiny}
+
+% Schöne Tabellen
+\usepackage{booktabs}
+% für Alignment bei Kommastelle
+\usepackage{siunitx}
+\sisetup{group-separator       = {,}, % default: \, ("thinspace")
+         group-minimum-digits  = 3,   % default: 5
+         input-decimal-markers = {.}} % default: "{.,}"
