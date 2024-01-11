@@ -1,0 +1,50 @@
+---
+author: Sarah Zeller
+title: Awesome presentation
+subtitle: Cool seminar
+date: today
+
+format: 
+  tud-beamer: default
+    
+execute:
+  warning: false
+  echo: false
+bibliography: references.bib
+---
+
+# In the morning
+
+## Getting up
+
+-   Turn off alarm
+-   Get out of bed
+
+## Breakfast
+
+-   Eat eggs
+-   Drink coffee
+
+# In the evening
+
+## Dinner
+
+-   Eat spaghetti
+-   Drink wine
+
+## Going to sleep
+
+-   Get in bed
+-   Count sheep
+-   Add a reference to your \LaTeX-template [@tidyverse]
+
+## References {.allowframebreaks}
+
+::: {#refs}
+:::
+
+# Appendix
+
+## Slide 1
+
+## Slide 2
