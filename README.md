@@ -23,13 +23,13 @@ If you're using *references*, please use a header at the second level (`## Refer
 As in the template, please add the following lines then to place the references exactly there.
 Otherwise, the references by default show up at the last slide.
 
+```
+::: {#refs}
+:::
+```
+
 Please write in the YAML header which references you want to use, like so:
 
 ```
 bibliography: references.bib
-```
-
-```
-::: {#refs}
-:::
 ```
