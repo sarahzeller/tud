@@ -2,6 +2,8 @@
 
 A template for a beamer presentation in quarto, styled for the TUD.
 
+![](tud-beamer.png)
+
 ## Installing
 
 ```bash
@@ -17,7 +19,7 @@ Refer to `template.qmd` for how to use the extension.
 ## References
 
 If you're using *references*, please use a header at the second level (`## References`).
-Ad in the template, please add the following lines then to place the references exactly there.
+As in the template, please add the following lines then to place the references exactly there.
 Otherwise, the references by default show up at the last slide.
 
 ```
