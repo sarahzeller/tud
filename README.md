@@ -1,16 +1,23 @@
 # tud-beamer
 
-A template for a beamer presentation in quarto, styled for the TUD.
+A template for a typst or beamer presentation in quarto, styled for the TUD.
 
+![](tud-typst.PNG)
 ![](tud-beamer.PNG)
 
 ## Installing
 
+This will install only the extension:
+
 ```bash
-quarto use template sarahzeller/tud-beamer
+quarto add sarahzeller/tud
 ```
 
-This will install the extension and create an example qmd file that you can use as a starting place for your presentation: `template.qmd`.
+If you want to have a template installed, you can use the following command:
+
+```bash
+quarto use template sarahzeller/tud
+```
 
 ## Using 
 
