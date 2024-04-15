@@ -1,8 +1,11 @@
-# tud-beamer
+# tud presentations
 
 A template for a typst or beamer presentation in quarto, styled for the TUD.
 
+## typst look
 ![](tud-typst.PNG)
+
+## beamer look
 ![](tud-beamer.PNG)
 
 ## Installing
