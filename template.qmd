@@ -2,9 +2,7 @@
 author: Sarah Zeller
 title: Awesome presentation
 subtitle: Cool seminar
-date: today
-
-format: tud-beamer
+format: tud-typst
 
 bibliography: references.bib
 ---
@@ -33,7 +31,6 @@ bibliography: references.bib
 -   Get in bed
     -   Count sheep
     -   Count even more sheep
-
 -   Add a reference to your \LaTeX-template [@tidyverse]
 
 ## References {.allowframebreaks}
@@ -70,4 +67,3 @@ library(modelsummary)
 mtcars |> 
   datasummary_skim()
 ```
-
