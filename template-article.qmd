@@ -1,5 +1,45 @@
 ---
 format: 
   article-typst:
-    keep-typst: true
+    keep-typ: true
+    
+title: Title of the paper
+by-authors:
+  - name: Jane Doe
+    corresponding: true
+    affiliations: 
+      - id: 1
+        email: jane.doe@tu-dresden.de
+  - name: John Doe 
+    affiliations: 
+      - id: 1
+        email: john.doe@tu-dresden.de
+jel-codes:
+  - A10
+  - B20
+affiliations:
+  - name: TUD
+  - name: TUW
+keywords:
+  - bla
+  - blubb
+  
+bibliography: references.bib
+bibliographystyle: apa
 ---
+
+# Headline 1
+
+## Headline 2
+
+Let's cite something here [@tidyverse]. 
+
+
+```{r}
+#| label: fig-1
+
+data(mtcars)
+mtcars |> plot()
+```
+
+
