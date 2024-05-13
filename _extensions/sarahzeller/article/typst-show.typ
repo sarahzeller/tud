@@ -37,7 +37,10 @@
     $for(jel-codes)$
       "$it$",
     $endfor$
-  $endif$
   ),
+  $endif$
+  $if(mainfont)$
+  mainfont: "$mainfont$",
+  $endif$
   doc,
 )

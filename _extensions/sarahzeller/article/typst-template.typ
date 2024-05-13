@@ -1,4 +1,4 @@
-#let ica-abstract(title: "", authors: (), affiliations: (), keywords: none, jel-codes: none, bibliography-file: none, body) = {
+#let ica-abstract(title: "", authors: (), affiliations: (), keywords: none, jel-codes: none, mainfont: "Open Sans", bibliography-file: none, body) = {
   // Set the document's basic properties.
   set document(
     title: title,
@@ -22,7 +22,7 @@
 
   let base-font-size = 10pt
 
-  set text(size: base-font-size, lang: "en")
+  set text(size: base-font-size, font: mainfont, lang: "en")
   show par: set block(spacing: 1.4em)
   set par(justify: true, leading: .5em)
 
