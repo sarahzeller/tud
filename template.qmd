@@ -2,7 +2,9 @@
 author: Sarah Zeller
 title: Awesome presentation
 subtitle: Cool seminar
-format: tud-typst
+format: 
+  tud-typst:
+    section_slides: false
 
 bibliography: references.bib
 ---
