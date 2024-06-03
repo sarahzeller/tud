@@ -35,11 +35,6 @@ bibliography: references.bib
     -   Count even more sheep
 -   Add a reference to your \LaTeX-template [@tidyverse]
 
-## References {.allowframebreaks}
-
-::: {#refs}
-:::
-
 # Appendix
 
 ## A graph for the `mtcars` dataset
@@ -48,25 +43,16 @@ bibliography: references.bib
 #| label: fig-mtcars
 #| fig-height: 5
 #| fig-cap: Horse power correlates with miles per gallon.
-library(ggplot2)
-mtcars |> 
-  ggplot() +
-  geom_point(aes(x = mpg, y = hp, col = cyl)) +
-  labs(x = "Miles per gallon",
-       y = "Horse power",
-       col = "Cylinders",
-       caption = "Data: {datasets}") +
-  theme_minimal()
+data(mtcars)
+
+hist(mtcars$mpg)
 ```
 
 ## A table for the `mtcars` dataset
 
 ```{r}
-#| label: tabl-mtcars
-#| tbl-cap: Summary statistics for `mtcars`
-#| eval: false
+#| label: tbl-mtcars
 
-library(modelsummary)
 mtcars |> 
-  datasummary_skim()
+  head()
 ```
