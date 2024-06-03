@@ -52,7 +52,8 @@ hist(mtcars$mpg)
 
 ```{r}
 #| label: tbl-mtcars
-
+#| tbl-cap: Summary statistics for `mtcars`
+#| eval: false
 mtcars |> 
   head()
 ```
