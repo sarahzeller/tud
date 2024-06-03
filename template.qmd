@@ -35,11 +35,6 @@ bibliography: references.bib
     -   Count even more sheep
 -   Add a reference to your \LaTeX-template [@tidyverse]
 
-## References {.allowframebreaks}
-
-::: {#refs}
-:::
-
 # Appendix
 
 ## A graph for the `mtcars` dataset
