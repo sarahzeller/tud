@@ -7,6 +7,7 @@
 	theme-background: rgb("#00305D"),
 	theme-text: white,
 	font: "Open Sans",
+	has-section-slides: true,
 	doc
 ) = {
 	// Variables for configuration.
@@ -47,14 +48,16 @@
 		header: [
 			#locate(loc => {
 				let sections = query(heading.where(level: 1), loc)
+				let offset = if (has-section-slides) { 1 } else { 0 }
+				let link-offset = if (has-section-slides) { 0 } else { 1 }
 				let sectionsWithPages = sections
 					.enumerate(start: 1)
 					.map(((i, s)) => {(
-						let start = counter(page).at(s.location()).first() + 1,
+						let start = counter(page).at(s.location()).first() + offset,
 						let stop = if (i < sections.len()) {
 							counter(page).at(sections.at(i).location()).first()
 						} else {
-							counter(page).final(loc).first() + 1
+							counter(page).final(loc).first() + offset
 						},
 						return (pageRange: range(start, stop), label: s.body)
 				)})
@@ -71,7 +74,9 @@
 							#let is-active = pageRange.contains(loc.page()-1)
 							#let color = if (is-active == true) {theme-background} else { theme-muted}
 							#show link: set text(fill: color)
-							#link((page: pageRange.first(), x: 0em, y:0em), label)
+							#if pageRange.len() > 0 [
+								#link((page: pageRange.first() + link-offset, x: 0em, y:0em), label)
+							]
 							#set align(horizon)
 							#stack(
 								dir: ltr,
@@ -131,14 +136,22 @@
 	//format code blocks
 	show raw.where(block: true): set text(size: 0.8em)
 
-	show heading.where(level: 1): title => {
-		pagebreak()
-		block(width: 100%, height: 100%)[
-			#set align(horizon)
-			#background()
-			#text(fill: theme-text, title)
-		]
-	}
+
+		show heading.where(level: 1): title => {
+			if has-section-slides == true {
+				pagebreak()
+				block(width: 100%, height: 100%)[
+					#set align(horizon)
+					#background()
+					#text(
+						fill: theme-text,
+						title
+					)
+				]
+			} else {
+				pagebreak(weak: true)
+			}
+		}
 
 	show heading.where(level: 2): title => {
 		pagebreak(weak: true)

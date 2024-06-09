@@ -37,8 +37,6 @@
   $if(theme_text)$
     theme-text: $theme_text$,
   $endif$
-  $if(section_slides)$
-    section-slides: $section_slides$,
-  $endif$
+    has-section-slides: $has_section_slides$,
   doc
 )

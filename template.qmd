@@ -2,9 +2,9 @@
 author: Sarah Zeller
 title: Awesome presentation
 subtitle: Cool seminar
-format: 
+format:
   tud-typst:
-    section_slides: false
+    has_section_slides: false
 
 bibliography: references.bib
 ---
@@ -52,8 +52,7 @@ hist(mtcars$mpg)
 
 ```{r}
 #| label: tbl-mtcars
-#| tbl-cap: Summary statistics for `mtcars`
-#| eval: false
+
 mtcars |> 
   head()
 ```
